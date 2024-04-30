@@ -1,1 +1,17 @@
-<p>demo works!</p>,
+<dx-data-grid [dataSource]="requisitions">
+    <dxo-editing mode="popup" [allowAdding]="true"></dxo-editing>
+    <dxo-popup></dxo-popup>
+    <dxo-form labelLocation="left" [colCount]="1">
+
+        <dxi-item dataField="areaUnitId" [disabled]="true"></dxi-item>
+        <dxi-item dataField="costCodeName" [disabled]="true"></dxi-item>
+        <dxi-item dataField="costTypeName" [disabled]="true"></dxi-item>
+    </dxo-form>
+
+    <dxi-column dataField="areaUnitId">
+        <dxo-lookup [dataSource]="areaUnitChartOfAccounts" valueExpr="id" displayExpr="chartOfAccountName">
+        </dxo-lookup>
+    </dxi-column>
+    <dxi-column dataField="costCodeName"></dxi-column>
+    <dxi-column dataField="costTypeName"></dxi-column>
+</dx-data-grid>
