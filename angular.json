@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devextreme/scss/bundles/dx.material.blue.light.scss",
               "src/styles.css"
             ],
             "scripts": []
